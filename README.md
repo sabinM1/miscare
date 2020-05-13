@@ -1,5 +1,5 @@
 # miscare
-<h3>Movement. Detect motion using a PIR sensor</h3>
+<h3>Movement. Detect motion using a PIR sensor and an Arduino</h3>
 
 ## Requirements
 ### Hardware:
