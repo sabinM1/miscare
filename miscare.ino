@@ -25,39 +25,10 @@ int noteDurations[] = {
 //Motion sensor pin
 #define MISC_PIN 8
 
-//
-
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
-
-
 bool activ = 0;
-
-//void activat()
-//{
-//  if (irrecv.decode(&results)) {
-//    Serial.println(results.value, HEX);
-//    if (results.value == 0xFF9867)  {
-//      Serial.println("activated");
-//      digitalWrite(LED_BUILTIN, HIGH);
-//      activ = 1;
-//    }
-//    irrecv.resume(); // Receive the next value
-//  }
-//}
-//void dezactivat()
-//{
-//  if (irrecv.decode(&results)) {
-//    Serial.println(results.value, HEX);
-//    if (results.value == 0xFFD827)  {
-//      Serial.println("deactivated");
-//      digitalWrite(LED_BUILTIN, LOW);
-//      activ = 0;
-//    }
-//    irrecv.resume(); // Receive the next value
-//  }
-//}
 
 void speaker()
 {
@@ -109,19 +80,3 @@ void loop() {
   noTone(SPK_PIN);
   delay(10);
 }
-
-
-/*
-for (int thisNote = 0; thisNote < 5; thisNote++) {
-    // to calculate the note duration, take one second divided by the note type.
-    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-    int noteDuration = 1000 / noteDurations[thisNote];
-    tone(6, melody[thisNote], noteDuration);
-    // to distinguish the notes, set a minimum time between them.
-    // the note's duration + 30% seems to work well:
-    int pauseBetweenNotes = noteDuration * 1.30;
-    delay(pauseBetweenNotes);
-    // stop the tone playing:
-    noTone(6);
-      }
-*/
