@@ -23,13 +23,14 @@
 6. You will need to find a line below that has your Arduino type, mine is Nano so I used this one: <br> ```// Arduino Duemilanove, Diecimila, LilyPad, Mini, Fio, Nano, etc ``` <br> ```#else``` <br> ```//#define IR_USE_TIMER1 // tx = pin 9``` <br> ```#define IR_USE_TIMER2     // tx = pin 3```.
 7. Comment the line that defines the current timer and uncomment the line you want to use for the new timer. In my case it will be like this: <br> ```#define IR_USE_TIMER1 // tx = pin 9``` <br> ```//#define IR_USE_TIMER2     // tx = pin 3```.
 8. Save and restart the Arduino IDE if you still had it open. If you have any problems regarding this topic or other parts of the program please [contact me on Reddit](https://www.reddit.com/user/sabin_M1).
-### Pin configuration
+### Program configuration
 In the Arduino program the lines from 3 to 26 are for defining pins, notes and custom arrays.
 - LED pin: The LED pin... ₙₒ ₛₕᵢₜ
 - IR receive pin: The IR receiver pin
 - Speaker pin: The speaker power pin
-- Notes used: The notes you will be using for when the motion sensor it activated and detects motion. <sup>[1](#footnote1)</sup>
+- Notes used: The notes you will be using for when the motion sensor it activated and detects motion. <sup>[1](#footnote1)</sup> <br>
 
+At the lines 60 and 64 there are defined the two IR codes. You will probably need to change that according to your remote. You can check out the <i>IRrecord</i> example in the IRremote library to find out your codes.
 ## Images
 [Photo album on Imgur](https://imgur.com/a/BTvhxpK) <br>
 [Kinda bad 3D model, open it with Windows 10's 3D viewer if you want an easy solution](https://www.mediafire.com/file/m8dd7rutcftjrwh/Arduino3D.rar/file)
